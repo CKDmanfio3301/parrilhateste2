@@ -1,0 +1,137 @@
+/* Definições globais */
+:root {
+    --branco-principal: #FFFFFF;
+    --verde-principal: #bb0615;
+    --verde-secundario: #b60505;
+    --preto-secundario: #1D1D1D;
+    --cinza-secundario: #C0C0C0;
+    --cor-de-fundo: #000000;
+    --fonte-principal: 'Inter';
+    --botao-verde-efeito: #ff0404;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.principal {
+    background-image: url("atualfundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.container__botao {
+    background-color: var(--verde-principal);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+    color: var(--branco-principal);
+}
+
+.container__caixa {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.secundario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.secundario__imagem {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--verde-principal);
+    margin-bottom: 0.5em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+    background-color: var(--verde-principal);
+    color: var(--branco-principal);
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+.rodape {
+    text-align: center;
+    padding: 20px;
+}
+
+.rodape img {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .secundario {
+        flex-direction: column;
+    }
+
+    .container__botao {
+        width: 90%;
+    }
+}
